@@ -95,7 +95,7 @@ function App() {
         </VStack>
       </Container>
       ): <VStack justifyContent={'center'} h={"100vh"} padding={12} bgColor={'gray.800'} >
-          <Text fontFamily={'Montserrat'} letterSpacing={1} fontSize={"2.3rem"} color={'white'}>KRYPTO CHAT</Text>
+          <Text fontFamily={'Montserrat'} letterSpacing={1} fontSize={"2.3rem"} color={'white'} textAlign={'center'}>KRYPTO CHAT</Text>
           <Text fontFamily={'Lato'} letterSpacing={1} fontSize={"1rem"} color={'white'} textAlign={'center'}>Protecting your personal information is better than anything else.</Text>
           <Button onClick={handleGoogleLogin} color={"white"} borderRadius='none' colorScheme={'purple'}  >Continue With Google</Button>
       </VStack>}
