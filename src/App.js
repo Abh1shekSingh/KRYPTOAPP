@@ -71,7 +71,7 @@ function App() {
         <VStack justifyContent={"center"} h={"100vh"}>
 
           <HStack padding={"1rem"} w="full" justifyContent={"space-between"} >
-            <Text fontFamily={'Montserrat'} letterSpacing={1} fontSize={"1.7rem"}>Krypto Chat</Text>
+            <Text fontFamily={'Montserrat'} letterSpacing={1} fontSize={"1.4rem"}>Krypto Chat</Text>
             <Button fontFamily={'Montserrat'} letterSpacing={1} borderRadius='0px' onClick={logout} colorScheme={'purple'} textColor={"white"}>Logout</Button>
           </HStack>
 
@@ -88,7 +88,11 @@ function App() {
           <form onSubmit={handleSubmit} style={{width:"100%"}}>
             <HStack padding={4}>
               <Input value={message} fontFamily={'Lato'} borderRadius='none' borderColor={'purple'} onChange ={(e) => setMessage(e.target.value)} placeholder='Message' />
-              <Button borderRadius='none' fontFamily={'Montserrat'} paddingX={6} type="submit" color={"white"} colorScheme={"purple"}>Send 🕊️</Button>
+              {message === "" ? (
+                <Button fontFamily={'Montserrat'} paddingX={7} letterSpacing={1} borderRadius='0px' colorScheme={'purple'} textColor={"white"} disabled >Send 🕊️</Button>
+              ): (
+                <Button fontFamily={'Montserrat'} paddingX={7} letterSpacing={1} borderRadius='0px' colorScheme={'purple'} textColor={"white"} type="submit">Send 🕊️</Button>
+              )}
             </HStack>
           </form>
 
